@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import Post
 
 # Create your views here.
 posts = [
@@ -18,11 +18,11 @@ posts = [
 ]
 def home(request):
     context={
-        'post':posts
+        'post': Post.objects.all()
     }
     return render(request, 'blog/home.html',context)
 
 def about(request):
-    return render(request, 'blog/about.html')
+    return render(request, 'blog/about.html',{'title': 'About'})
 
    
