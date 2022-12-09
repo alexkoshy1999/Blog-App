@@ -9,9 +9,9 @@
     <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
 
     {% if title %}
-        <title>Danjgo Blog - {{ title }}</title>
+        <title>Django Blog - {{ title }}</title>
     {% else %}
-        <title>Danjgo Blog</title>
+        <title>Django Blog</title>
     {% endif %}
 </head>
 <body>
@@ -51,7 +51,7 @@
                 </div>
               {% endfor %}
             {% endif %}
-            {% block content %}{% endblock %}
+            {% block content %}{% endblock content %}
           </div>
           <div class="col-md-4">
             <div class="content-section">
